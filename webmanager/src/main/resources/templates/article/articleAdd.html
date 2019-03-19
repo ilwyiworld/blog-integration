@@ -1,0 +1,66 @@
+﻿<div style="margin: 15px;">
+    <form class="layui-form" id="addForm">
+        <div class="layui-form-item" style="display:none">
+            <label class="layui-form-label">文章ID</label>
+            <div class="layui-input-inline" style="float:left">
+                <input type="text" name="id" id="id" class="layui-input" autocomplete="off" >
+            </div>
+            <div class="layui-input-inline" style="float:left">
+                <input type="text" name="userId" id="userId" class="layui-input" autocomplete="off" >
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label add-label">文章标题</label>
+            <div class="layui-input-inline add-input">
+                <input type="text" name="title" id="title" class="layui-input" placeholder="请输入文章标题"
+                       autocomplete="off" lay-verify="required" >
+            </div>
+            <div class="layui-form-mid layui-word-aux" style="font-size: 12px;visibility:hidden">以英文;来分隔</div>
+
+            <label class="layui-form-label add-label">文章类别</label>
+            <div class="layui-input-inline add-input">
+                <select name="type" id="type">
+                    <option value="0">原创</option>
+                    <option value="1">转载</option>
+                    <option value="2">翻译</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label add-label">文章标签</label>
+            <div class="layui-input-inline add-input">
+                <input type="text" name="tag" placeholder="请输入标签" autocomplete="off" id="tag"
+                       onkeyup="this.value=this.value.replace(/[^\r\n0-9a-zA-Z\u4e00-\u9fa5\;]/g,'');" class="layui-input" lay-verify="label|required">
+            </div>
+            <div class="layui-form-mid layui-word-aux" style="font-size: 12px">以英文;来分隔</div>
+
+            <label class="layui-form-label add-label">文章分类</label>
+            <div class="layui-input-inline add-input">
+                <input type="text" name="category" placeholder="请输入分类" autocomplete="off" id="category"
+                       onkeyup="this.value=this.value.replace(/[^\r\n0-9a-zA-Z\u4e00-\u9fa5\;]/g,'');" class="layui-input" lay-verify="label|required">
+            </div>
+            <div class="layui-form-mid layui-word-aux" style="font-size: 12px">以英文;来分隔</div>
+        </div>
+
+        <!--<div class="layui-form-item">
+            <label class="layui-form-label add-label">封面图片</label>
+            <div class="layui-input-inline add-input">
+                <button type="button" class="layui-btn layui-btn-primary" id="uploadScript"><i class="layui-icon">&#xe67c;</i>请上传封面图片</button>
+                <input type="text" id="fileName" name="fileName" class="layui-input" style="display:none">
+                <input type="text" id="filePath" name="filePath" class="layui-input" style="display:none">
+                <input type="text" id="fullPath" name="fullPath" class="layui-input" style="display:none">
+                <a href="javascript:void(0);" id="uploadFile" style="display:none; padding-top: 6px;padding-left:4px"></a>
+            </div>
+        </div>-->
+
+        <div class="layui-form-item" id="editor">
+            <p>欢迎添加文章</p>
+
+        </div>
+
+        <button lay-filter="add" lay-submit style="display: none;"></button>
+        <button lay-filter="save" lay-submit style="display: none;"></button>
+    </form>
+</div>
